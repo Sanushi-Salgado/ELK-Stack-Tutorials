@@ -1,0 +1,20 @@
+# 1. Creating an index
+# Here we are going to create an index called 'ecommerce'
+PUT /ecommerce 
+{ }
+
+
+# 2. Retrieving all indexes in the cluster
+# v stands for - output should be verbose
+# Now under the index column, you should be able to see an index called 'ecommerce'
+GET /_cat/indices?v
+
+
+# 3. Deleting an index
+# Here we are going to delete the 'ecommerce' index that we created earlier
+DELETE /ecommerce
+
+
+# 4. Retrieving all indexes in the cluster
+# Now under the index column, the 'ecommerce' index will no longer appear if it has been deleted successfully
+GET /_cat/indices?v
