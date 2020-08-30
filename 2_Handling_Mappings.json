@@ -1,0 +1,37 @@
+# 1. Creating an index with mappings
+# Here we are going to create an index called 'ecommerce' & add mappings to it
+PUT /ecommerce 
+{
+  "mappings": {
+      "properties": {
+        "name": {
+          "type": "text"
+        },
+        "price": {
+          "type": "double"
+        },
+        "description": {
+          "type": "text"
+        },
+        "status": {
+          "type": "text"
+        },
+        "quantity": {
+          "type": "integer"
+        },
+        "categories": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "text"
+            }
+          }
+        },
+        "tags": {
+          "type": "text"
+        }
+    }
+  }
+}
+
+
